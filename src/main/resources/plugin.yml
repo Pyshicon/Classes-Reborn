@@ -1,0 +1,4 @@
+name: Diminesion
+main: com.diminesion.plugin.Diminesion
+version: 1.0.0
+commands:
