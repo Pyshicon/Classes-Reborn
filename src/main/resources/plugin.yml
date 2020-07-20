@@ -1,4 +1,4 @@
-name: Diminesion
-main: com.diminesion.plugin.Diminesion
+name: ClassesReborn
+main: io.github.pyshicon.classesreborn.ClassesReborn
 version: 1.0.0
 commands:
