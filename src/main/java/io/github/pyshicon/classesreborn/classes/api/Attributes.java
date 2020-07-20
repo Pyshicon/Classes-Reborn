@@ -1,6 +1,6 @@
-package io.github.pyshicon.classesreborn.classes.attributes;
+package io.github.pyshicon.classesreborn.classes.api;
 
-public abstract class Attributes {
+public class Attributes {
 
     private int points;
 
@@ -14,5 +14,13 @@ public abstract class Attributes {
 
     public void setPoints(int points) {
         this.points = points;
+    }
+
+    public void addPoints(int points) {
+        this.points =+ points;
+    }
+
+    public void subtractPoints(int points) {
+        this.points =- points;
     }
 }
