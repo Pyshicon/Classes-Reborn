@@ -4,7 +4,7 @@ import io.github.pyshicon.classesreborn.classes.api.Attributes;
 
 public class Constitution extends Attributes {
 
-    public Constitution(int points) {
+    Constitution(int points) {
         super(points);
     }
 }

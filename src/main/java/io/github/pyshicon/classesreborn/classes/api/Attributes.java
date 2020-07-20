@@ -4,23 +4,23 @@ public class Attributes {
 
     private int points;
 
-    public Attributes(int points) {
+    protected Attributes(int points) {
         this.points = points;
     }
 
-    public int getPoints() {
+    int getPoints() {
         return this.points;
     }
 
-    public void setPoints(int points) {
+    void setPoints(int points) {
         this.points = points;
     }
 
-    public void addPoints(int points) {
+    void addPoints(int points) {
         this.points =+ points;
     }
 
-    public void subtractPoints(int points) {
+    void subtractPoints(int points) {
         this.points =- points;
     }
 }
