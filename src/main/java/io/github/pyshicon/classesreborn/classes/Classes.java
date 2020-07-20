@@ -1,49 +1,32 @@
 package io.github.pyshicon.classesreborn.classes;
 
-import io.github.pyshicon.classesreborn.classes.attributes.type.Constitution;
-import io.github.pyshicon.classesreborn.classes.attributes.type.Dexterity;
-import io.github.pyshicon.classesreborn.classes.attributes.type.Strength;
-import javafx.scene.paint.Material;
+import io.github.pyshicon.classesreborn.classes.api.Class;
+
+import java.util.ArrayList;
 
 public class Classes {
 
-    private final String id;
-    private final String name;
-    private final Material icon;
-    private final Strength strength;
-    private final Constitution constitution;
-    private final Dexterity dexterity;
+    private static final ArrayList<Class> classes = new ArrayList<Class>();
 
-    public Classes(String id, String name, Material icon, Strength strength, Constitution constitution, Dexterity dexterity) {
-        this.id = id;
-        this.name = name;
-        this.icon = icon;
-        this.strength = strength;
-        this.constitution = constitution;
-        this.dexterity = dexterity;
+    public static ArrayList<Class> getClasses() {
+        return classes;
     }
 
-    public String getId() {
-        return id;
+    public static Class getClass(String id) {
+        for (int index = 0; index < classes.size(); index++) {
+            if (classes.get(index).getId().equals(id)) {
+                return classes.get(index);
+            }
+        }
+
+        return null;
     }
 
-    public String getName() {
-        return name;
+    public static void addClass(Class c) {
+        classes.add(c);
     }
 
-    public Material getIcon() {
-        return icon;
-    }
-
-    public Strength getStrength() {
-        return this.strength;
-    }
-
-    public Constitution getConstitution() {
-        return this.constitution;
-    }
-
-    public Dexterity getDexterity() {
-        return this.dexterity;
+    public static void removeClass(Class c) {
+        classes.remove(c);
     }
 }
